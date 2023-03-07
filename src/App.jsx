@@ -1,19 +1,16 @@
 import './App.css'
 import { kana } from './data'
+import NavBar from './components/NavBar'
+import Options from './components/options'
+import Quiz from './components/Quiz'
 
 function App() {
-  const listItems = kana.map((el,i) => {
-    return (
-      <li key={i}>{el.kana}</li>
-    )
-  })
 
   return (
     <div>
-      <h1>血敷くなひくとねもみはハマ</h1>
-      <ul>
-        {listItems}
-      </ul>
+      <NavBar />
+      <Options />
+      <Quiz />
     </div>
   )
 }
