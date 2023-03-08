@@ -1,7 +1,7 @@
-import { kana } from "../data"
 import { useState } from "react"
+import { kana } from "../data"
 
-function Options() {
+function Options(props) {
     const [checkedItems, setCheckedItems] = useState(
         {
             plainHiragana: true,
@@ -12,8 +12,6 @@ function Options() {
             comboKatakana: false,
         }
     )
-    const [filteredList, setFilteredList] = useState(kana)
-
     function handleChange(event) {
         const {name, checked} = event.target
         setCheckedItems(prevItems => ({...prevItems, [name]: checked}))
@@ -21,7 +19,14 @@ function Options() {
 
     function handleSubmit(event) {
         event.preventDefault()
-        
+        const categories = []
+        for(let property in checkedItems) {
+            if(checkedItems[property]) {
+                categories.push(property)
+            }
+        }
+        const filtered = kana.filter(el => categories.includes(el.cat))
+        props.onFilter(filtered)
     }
 
     return (
@@ -89,5 +94,5 @@ function Options() {
       </form>
     )
   }
-  
+
   export default Options
