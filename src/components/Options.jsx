@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { kana } from "../data"
 
 function Options(props) {
@@ -12,6 +12,11 @@ function Options(props) {
             comboKatakana: false,
         }
     )
+
+    useEffect(() => {
+        console.log(checkedItems)
+    }, [])
+
     function handleChange(event) {
         const {name, checked} = event.target
         setCheckedItems(prevItems => ({...prevItems, [name]: checked}))
@@ -27,6 +32,7 @@ function Options(props) {
         }
         const filtered = kana.filter(el => categories.includes(el.cat))
         props.onFilter(filtered)
+        console.log(checkedItems)
     }
 
     return (

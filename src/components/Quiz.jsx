@@ -1,19 +1,22 @@
-import { kana } from "../data"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
-function Quiz() {
-    const [kana, setKana] = useState("")
-    const [correct, setCorrect] = useState(0)
+function Quiz(props) {
+    const [quizKana, setQuizKana] = useState([])
 
-    function checkAnswer() {
-
-    }
-
+    useEffect(() => {
+        setQuizKana(props.data?.map((el,i) => (
+            <li key={i}>{el.kana}</li>
+        )));
+    }, [props.data])
+ 
     return (
         <div className="quiz">
-            <h1 className="kana">{kana}</h1>
+            <h1 className="kana"></h1>
+            <ul>
+                {quizKana}
+            </ul>
             <input type="text" />
-            <button onClick={checkAnswer}>Enter</button>
+            <button>Enter</button>
         </div>
     )
 }
