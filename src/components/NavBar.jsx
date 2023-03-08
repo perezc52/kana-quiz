@@ -1,9 +1,9 @@
 
 function NavBar() {
   return (
-    <nav>
-        <h2>Quiz</h2>
-        <h2>Reference</h2>
+    <nav className="navbar">
+        <h2 className="nav-item">Quiz</h2>
+        <h2 className="nav-item">Reference</h2>
     </nav>
   )
 }

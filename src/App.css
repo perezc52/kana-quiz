@@ -1,4 +1,14 @@
-h1 {
-  color: darkblue;
-  font-family: 'Noto Sans JP', sans-serif;
+.app {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-item {
+  margin: 0 5px;
 }
