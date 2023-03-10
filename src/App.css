@@ -1,7 +1,10 @@
+
+
 .app {
   width: 80%;
   margin: 0 auto;
   padding: 10px;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .navbar {
