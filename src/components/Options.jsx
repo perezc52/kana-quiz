@@ -13,10 +13,6 @@ function Options(props) {
         }
     )
 
-    useEffect(() => {
-        console.log(checkedItems)
-    }, [])
-
     function handleChange(event) {
         const {name, checked} = event.target
         setCheckedItems(prevItems => ({...prevItems, [name]: checked}))
@@ -32,7 +28,6 @@ function Options(props) {
         }
         const filtered = kana.filter(el => categories.includes(el.cat))
         props.onFilter(filtered)
-        console.log(checkedItems)
     }
 
     return (

@@ -10,7 +10,6 @@ function App() {
 
   function handleFilter(newData) {
     setFilteredList(newData)
-    console.log(filteredList)
   }
 
   return (
