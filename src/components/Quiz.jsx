@@ -3,8 +3,9 @@ import { useState, useEffect } from "react"
 function Quiz(props) {
 
     const [quizKana, setQuizKana] = useState([])
-    const [message, setMessage] = useState("")
     const [currentKana, setCurrentKana] = useState("")
+    const [message, setMessage] = useState("")
+    const [inputValue, setInputValue] = useState("")
 
     useEffect(() => {
         setQuizKana(shuffleArray(props.data))
@@ -24,28 +25,51 @@ function Quiz(props) {
         return array;
       }
 
-      function checkAnswer() {
-        // answer checking logic here
-      }
+    function handleInputChange(event) {
+      setInputValue(event.target.value)
+    }
 
-      function nextKana() {
-        setQuizKana(prevQuizKana => {
-            const newQuizKana = [...prevQuizKana]
-            newQuizKana.shift()
-            return newQuizKana
-        })
+    function checkAnswer() {
+      if(inputValue.length === 0) return
+      const kanaObject = quizKana.find(el => el.kana === currentKana)
+      const correctAnswer = kanaObject.romanized
+      if(inputValue === correctAnswer) {
+        setMessage("Correct!")
+      }else {
+        setMessage(`Incorrect! The answer was ${correctAnswer}`)
       }
+    }
 
-      console.log(quizKana)
-      console.log(currentKana)
+    function nextKana() {
+      setMessage("")
+      setInputValue("")
+      setQuizKana(prevQuizKana => {
+          const newQuizKana = [...prevQuizKana]
+          newQuizKana.shift()
+          return newQuizKana
+      })
+      if(quizKana.length === 1) {
+        setCurrentKana("")
+        setMessage("You have finished all kana for this setting. Retry or choose a new setting")
+      }
+    }
+
+    function retry() {
+      setQuizKana(shuffleArray(props.data))
+      setMessage("")
+    }
+
+    console.log(quizKana)
+    console.log(currentKana)
  
     return (
         <div className="quiz">
-            <h1 className="kana">{quizKana.length > 0 ? currentKana : "You've finished all kana for this setting. Would you like to retry?"}</h1>
-            <input type="text" />
-            <button onClick={nextKana}>Next kana</button>
-            <button onClick={checkAnswer}>Check answer</button>
+            <h1 className="kana">{currentKana}</h1>
+            <input type="text" value={inputValue} onChange={handleInputChange} />
+            <button disabled={!quizKana.length} onClick={nextKana}>Next kana</button>
+            <button disabled={!quizKana.length} onClick={checkAnswer}>Check answer</button>
             <h2>{message}</h2>
+            {quizKana.length === 0 && <button onClick={retry}>Retry this set</button>}
         </div>
     )
 }
