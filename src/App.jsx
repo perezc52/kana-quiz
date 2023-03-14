@@ -4,19 +4,31 @@ import { kana } from './data'
 import NavBar from './components/NavBar'
 import Options from './components/Options'
 import Quiz from './components/Quiz'
+import Reference from './components/Reference'
 
 function App() {
   const [filteredList, setFilteredList] = useState(kana.filter(el => el.cat === 'plainHiragana'))
+  const [selectedTab, setSelectedTab] = useState("quiz")
 
   function handleFilter(newData) {
     setFilteredList(newData)
   }
 
+  function handleClick(tab) {
+    setSelectedTab(tab)
+  }
+
   return (
     <div className='app'>
-      <NavBar />
-      <Options onFilter={handleFilter}/>
-      <Quiz data={filteredList} />
+      <NavBar onClick={handleClick}/>
+      {
+        selectedTab === "quiz" ?
+        <div>
+          <Options onFilter={handleFilter}/>
+          <Quiz data={filteredList} />
+        </div> :
+        <Reference />
+      }
     </div>
   )
 }
