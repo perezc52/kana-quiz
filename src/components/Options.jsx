@@ -43,7 +43,7 @@ function Options(props) {
                             checked={checkedItems.plainHiragana}
                             onChange={handleChange}
                         />
-                        Plain
+                        Basic
                     </label>
                     <label>
                         <input
@@ -61,7 +61,7 @@ function Options(props) {
                             checked={checkedItems.comboHiragana}
                             onChange={handleChange}
                         />
-                        Combo
+                        Handakuon
                     </label>
                 </div>
             <h2>Katakana</h2>
@@ -73,7 +73,7 @@ function Options(props) {
                         checked={checkedItems.plainKatakana}
                         onChange={handleChange}
                     />
-                    Plain
+                    Basic
                 </label>
                 <label>
                     <input
@@ -91,7 +91,7 @@ function Options(props) {
                         checked={checkedItems.comboKatakana}
                         onChange={handleChange}
                     />
-                    Combo
+                    Handakuon
                 </label>
             </div>
             <button className="apply btn" type="submit">Apply</button>

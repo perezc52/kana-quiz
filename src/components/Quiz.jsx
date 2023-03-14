@@ -71,7 +71,7 @@ function Quiz(props) {
             <h1 className="kana">{currentKana}</h1>
             {
               quizKana.length !== 0 &&
-              <div className="quiz-group">
+              <>
                 <p>Press 'Enter' to check your answer and again to proceed.</p>
                 <input
                   type="text"
@@ -82,18 +82,16 @@ function Quiz(props) {
                 <div className="quiz-buttons">
                   <button 
                     className="btn"
-                    disabled={!quizKana.length}
                     onClick={nextKana}
                     >Next kana
                   </button>
                   <button
                     className="btn"
-                    disabled={!quizKana.length}
                     onClick={checkAnswer}
                     >Check answer
                   </button>
                 </div>
-              </div>
+              </>
             }
             <h2 className="message">{message}</h2>
             {quizKana.length === 0 && <button className="retry" onClick={retry}>Retry this set</button>}

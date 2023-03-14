@@ -20,6 +20,7 @@ function App() {
 
   return (
     <div className='app'>
+      <h1>Kana Quiz</h1>
       <NavBar onClick={handleClick}/>
       {
         selectedTab === "quiz" ?
