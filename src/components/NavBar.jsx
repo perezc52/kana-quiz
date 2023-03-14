@@ -11,8 +11,8 @@ function NavBar(props) {
 
   return (
     <nav className="navbar">
-        <h2 onClick={() => handleClick("quiz")} className={selectedTab === "quiz" ? "selected" : ""}>Quiz</h2>
-        <h2 onClick={() => handleClick("reference")} className={selectedTab === "reference" ? "selected" : ""}>Reference</h2>
+        <h2 onClick={() => handleClick("quiz")} className={selectedTab === "quiz" ? "selected tab" : "tab"}>Quiz</h2>
+        <h2 onClick={() => handleClick("reference")} className={selectedTab === "reference" ? "selected tab" : "tab"}>Reference</h2>
     </nav>
   )
 }

@@ -1,7 +1,7 @@
 
 function Reference() {
     return (
-        <div>
+        <div className="reference">
             <img src="../public/kana-chart.jpg"/>
         </div>
     )

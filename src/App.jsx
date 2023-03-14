@@ -23,9 +23,9 @@ function App() {
       <NavBar onClick={handleClick}/>
       {
         selectedTab === "quiz" ?
-        <div>
-          <Options onFilter={handleFilter}/>
+        <div className='quiz-options'>
           <Quiz data={filteredList} />
+          <Options onFilter={handleFilter}/>
         </div> :
         <Reference />
       }

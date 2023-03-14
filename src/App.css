@@ -1,17 +1,113 @@
 
-
+/* App */
 .app {
-  width: 80%;
+  width: 65%;
   margin: 0 auto;
-  padding: 10px;
+  padding: 20px;
   font-family: 'Noto Sans JP', sans-serif;
 }
 
+button {
+  display: inline-block;
+  padding: 10px 22px;
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Nav Bar */
 .navbar {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
 
-.nav-item {
+.selected {
+  border-bottom: 3px solid #008CBA;
+  color: #008CBA;
+}
+
+.tab:hover {
+  border-bottom: 3px solid #008CBA;
+  color: #008CBA;
+}
+
+/* Quiz + Options Container */
+.quiz-options {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+
+/* Options */
+.options{
+  width: 25%;
+  height: 50%;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.apply {
+  display: block;
+  margin: 10px 0;
+}
+
+/* Quiz */
+.quiz {
+  padding: 15px;
+  height: 50%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.quiz input {
+  width: 15%;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.quiz-buttons {
+  margin: 0 auto;
+}
+
+.quiz button {
   margin: 0 5px;
+}
+
+.kana {
+  font-size: 70px;
+  text-align: center;
+}
+
+.quiz p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.message {
+  text-align: center;
+}
+
+.retry {
+  display: inline-block;
+  margin: 0 auto;
+  width: 30%;
+}
+
+/* Reference */
+.reference {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.reference img {
+  width: 100%;
 }

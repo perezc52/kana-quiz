@@ -35,34 +35,37 @@ function Options(props) {
         <fieldset>
             <legend>Select what you want to practice</legend>
             <h2>Hiragana</h2>
-                <label>
-                    <input
-                        type="checkbox"
-                        name="plainHiragana"
-                        checked={checkedItems.plainHiragana}
-                        onChange={handleChange}
-                    />
-                    Plain
-                </label>
-                <label>
-                    <input
-                        type="checkbox"
-                        name="dakuonHiragana"
-                        checked={checkedItems.dakuonHiragana}
-                        onChange={handleChange}
-                    />
-                    Dakuon
-                </label>
-                <label>
-                    <input
-                        type="checkbox"
-                        name="comboHiragana"
-                        checked={checkedItems.comboHiragana}
-                        onChange={handleChange}
-                    />
-                    Combo
-                </label>
+                <div className="checkbox-container">
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="plainHiragana"
+                            checked={checkedItems.plainHiragana}
+                            onChange={handleChange}
+                        />
+                        Plain
+                    </label>
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="dakuonHiragana"
+                            checked={checkedItems.dakuonHiragana}
+                            onChange={handleChange}
+                        />
+                        Dakuon
+                    </label>
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="comboHiragana"
+                            checked={checkedItems.comboHiragana}
+                            onChange={handleChange}
+                        />
+                        Combo
+                    </label>
+                </div>
             <h2>Katakana</h2>
+            <div className="checkbox-container">
                 <label>
                     <input
                         type="checkbox"
@@ -90,7 +93,8 @@ function Options(props) {
                     />
                     Combo
                 </label>
-            <button type="submit">Apply</button>
+            </div>
+            <button className="apply btn" type="submit">Apply</button>
         </fieldset>
       </form>
     )
