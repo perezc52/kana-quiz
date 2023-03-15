@@ -2,6 +2,7 @@
 Kana Quiz is a study tool used to learn all the Hiragana and Katakana characters in the Japanese language. I made this because I wanted an easy way to quiz myself in order to learn. I got inspiration to make it based on a similar web app that already exists, but I did not like very much.
 
 ![](public/kana-quiz.gif)
+[Live Demo](https://perezc52.github.io/kana-quiz/)
 
 ## How It's Made:
 
