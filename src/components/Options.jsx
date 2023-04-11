@@ -100,7 +100,7 @@ function Options(props) {
                     Handakuon
                 </label>
             </div>
-            <button className="apply btn" type="submit">Apply</button>
+            <button disabled={Object.values(checkedItems).every(el => el === false)} className="apply btn" type="submit">Apply</button>
         </fieldset>
       </form>
     )

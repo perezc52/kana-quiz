@@ -79,7 +79,8 @@ function Quiz(props) {
                   ref={inputRef}
                   value={inputValue}
                   onKeyDown={handleKeyPress}
-                  onChange={handleInputChange} />
+                  onChange={handleInputChange}
+                  className="quiz-input" />
                 <div className="quiz-buttons">
                   <button 
                     className="btn"

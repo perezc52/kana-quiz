@@ -91,6 +91,11 @@ label input[type="checkbox"]:checked {
   border-color: #bc6c25;
 }
 
+button:disabled {
+  cursor: not-allowed;
+  color: lightgrey;
+}
+
 /* Quiz */
 .quiz {
   padding: 15px;
@@ -112,6 +117,13 @@ label input[type="checkbox"]:checked {
   font-size: 80px;
   margin: 0;
   color: black;
+}
+
+.quiz-input {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  width: 25%;
 }
 
 /* Reference */
