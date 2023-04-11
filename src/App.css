@@ -1,5 +1,13 @@
+html {
+  font-size: 1.15rem;
+}
 
 /* App */
+body {
+  background-color: #fefae0;
+  color: #bc6c25;
+}
+
 .app {
   width: 65%;
   margin: 0 auto;
@@ -10,34 +18,40 @@
 button {
   display: inline-block;
   padding: 10px 22px;
-  background-color: #008CBA;
+  background-color: #606c38;
   color: white;
   border: none;
   border-radius: 4px;
   text-decoration: none;
   transition: background-color 0.3s ease;
   cursor: pointer;
+  font-size: 0.8rem;
 }
 
 h1 {
   text-align: center;
+  color: #283618;
 }
 
 /* Nav Bar */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 30px;
 }
 
+.tab {
+  color: #bc6c25;
+}
+
 .selected {
-  border-bottom: 3px solid #008CBA;
-  color: #008CBA;
+  border-bottom: 3px solid #606c38;
+  color: #606c38;
 }
 
 .tab:hover {
-  border-bottom: 3px solid #008CBA;
-  color: #008CBA;
+  border-bottom: 3px solid #606c38;
+  color: #606c38;
   cursor: pointer;
 }
 
@@ -54,6 +68,10 @@ h1 {
   height: 50%;
 }
 
+.option-heading {
+  color: #606c38;
+}
+
 .checkbox-container {
   display: flex;
   flex-direction: column;
@@ -67,6 +85,12 @@ h1 {
 .options h2 {
   margin: 8px 0;
 }
+
+label input[type="checkbox"]:checked {
+  background-color: #bc6c25;
+  border-color: #bc6c25;
+}
+
 /* Quiz */
 .quiz {
   padding: 15px;
@@ -87,6 +111,7 @@ h1 {
   min-height: 80px;
   font-size: 80px;
   margin: 0;
+  color: black;
 }
 
 /* Reference */

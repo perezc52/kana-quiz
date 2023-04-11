@@ -10,6 +10,7 @@ function Quiz(props) {
 
     useEffect(() => {
         setQuizKana(shuffleArray(props.data))
+        setMessage("")
     }, [props.data])
 
     useEffect(() => {

@@ -34,29 +34,32 @@ function Options(props) {
       <form onSubmit={handleSubmit} className="options">
         <fieldset>
             <legend>Select what you want to practice</legend>
-            <h2>Hiragana</h2>
+            <h2 className="option-heading">Hiragana</h2>
                 <div className="checkbox-container">
-                    <label>
+                    <label for="plainHiragana">
                         <input
                             type="checkbox"
+                            id="plainHiragana"
                             name="plainHiragana"
                             checked={checkedItems.plainHiragana}
                             onChange={handleChange}
                         />
                         Basic
                     </label>
-                    <label>
+                    <label for="dakuonHiragana">
                         <input
                             type="checkbox"
+                            id="dakuonHiragana"
                             name="dakuonHiragana"
                             checked={checkedItems.dakuonHiragana}
                             onChange={handleChange}
                         />
                         Dakuon
                     </label>
-                    <label>
+                    <label for="comboHiragana">
                         <input
                             type="checkbox"
+                            id="comboHiragana"
                             name="comboHiragana"
                             checked={checkedItems.comboHiragana}
                             onChange={handleChange}
@@ -64,29 +67,32 @@ function Options(props) {
                         Handakuon
                     </label>
                 </div>
-            <h2>Katakana</h2>
+            <h2 className="option-heading">Katakana</h2>
             <div className="checkbox-container">
-                <label>
+                <label for="plainKatakana">
                     <input
                         type="checkbox"
+                        id="plainKatakana"
                         name="plainKatakana"
                         checked={checkedItems.plainKatakana}
                         onChange={handleChange}
                     />
                     Basic
                 </label>
-                <label>
+                <label for="dakuonKatakana">
                     <input
                         type="checkbox"
+                        id="dakuonKatakana"
                         name="dakuonKatakana"
                         checked={checkedItems.dakuonKatakana}
                         onChange={handleChange}
                     />
                     Dakuon
                 </label>
-                <label>
+                <label for="comboKatakana">
                     <input
                         type="checkbox"
+                        id="comboKatakana"
                         name="comboKatakana"
                         checked={checkedItems.comboKatakana}
                         onChange={handleChange}
