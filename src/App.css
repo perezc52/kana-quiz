@@ -97,6 +97,13 @@ button:disabled {
 }
 
 /* Quiz */
+.remaining {
+  color: black;
+  font-weight: bold;
+  position: relative;
+  left: 108px;
+}
+
 .quiz {
   padding: 15px;
   height: 50%;

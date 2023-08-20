@@ -69,6 +69,7 @@ function Quiz(props) {
  
     return (
         <div className="quiz">
+            <div className="remaining">Remaining: {quizKana.length}</div>
             <h1 className="kana">{currentKana}</h1>
             {
               quizKana.length !== 0 &&
